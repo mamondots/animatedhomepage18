@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>creative Design</title>
+</head>
+<body>
+    <div class="container">
+         <header>
+              <div class="logo">
+                 <img src="img/logo1.webp">
+              </div>
+              <div class="menu">
+                  <ul>
+                      <li><a href="">home</a></li>
+                      <li><a href="">about</a></li>
+                      <li><a href="">contact</a></li>
+                  </ul>
+              </div>
+              <div class="cart">
+                 <h2>cart <span>(0)</span></h2>
+                 <img src="img/avatar.webp">
+              </div>
+         </header>
+         <div class="socialIcon">
+            <i class="fa-brands fa-facebook-f facebook"></i>
+            <i class="fa-brands fa-instagram instagram"></i>
+            <i class="fa-brands fa-youtube youtube"></i>
+         </div>
+         <p class="sideTitle">made with mamondots webpages</p>
+         <div class="swiper">
+             <div class="swiper-wrapper">
+                 <div class="swiper-slide slide01">
+                     <div class="slideContent">
+                         <div class="slideInfo">
+                             <h2><span>$</span>8,99</h2>
+                             <h1>batman<br> rubber ducky</h1>
+                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br>
+                                Quia consequuntur in recusandae. Nihil a veritatis nam, <br>
+                                delectus tempore maxime perferendis voluptates iure impedit, quia <br>
+                                nisi illo nemo iusto.
+                             </p>
+                             <div class="btn">
+                                 <a href="">shop now</a>
+                             </div>
+                         </div>
+                         <div class="imgContent">
+                             <img src="img/ducky.webp">
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="swiper-slide slide02">
+                    <div class="slideContent">
+                        <div class="slideInfo">
+                            <h2><span>$</span>4,99</h2>
+                            <h1>yummy<br> pluse burger</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br>
+                               Quia consequuntur in recusandae. Nihil a veritatis nam, <br>
+                               delectus tempore maxime perferendis voluptates iure impedit, quia <br>
+                               nisi illo nemo iusto.
+                            </p>
+                            <div class="btn">
+                                <a href="">shop now</a>
+                            </div>
+                        </div>
+                        <div class="imgContent">
+                            <img src="img/burger1.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide03">
+                    <div class="slideContent">
+                        <div class="slideInfo">
+                            <h2><span>$</span>7,99</h2>
+                            <h1>chewing<br> rubber bone</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br>
+                               Quia consequuntur in recusandae. Nihil a veritatis nam, <br>
+                               delectus tempore maxime perferendis voluptates iure impedit, quia <br>
+                               nisi illo nemo iusto.
+                            </p>
+                            <div class="btn">
+                                <a href="">shop now</a>
+                            </div>
+                        </div>
+                        <div class="imgContent">
+                            <img src="img/bone.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide04">
+                    <div class="slideContent">
+                        <div class="slideInfo">
+                            <h2><span>$</span>5,99</h2>
+                            <h1>comfy<br> pet house</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br>
+                               Quia consequuntur in recusandae. Nihil a veritatis nam, <br>
+                               delectus tempore maxime perferendis voluptates iure impedit, quia <br>
+                               nisi illo nemo iusto.
+                            </p>
+                            <div class="btn">
+                                <a href="">shop now</a>
+                            </div>
+                        </div>
+                        <div class="imgContent">
+                            <img src="img/house.webp">
+                        </div>
+                    </div>
+                </div>
+
+
+             </div>
+             <div class="arrows">
+                 <div class="swiper-button-next arrow"></div>
+                 <div class="swiper-button-prev arrow"></div>
+             </div>
+         </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper",{
+            direction:"vertical",
+            loop:true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+
+        let animation = anime({
+            targets:"header",
+            translateX:[180,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+        });
+
+        anime({
+            targets:".socialIcon",
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:300
+        });
+
+        anime({
+            targets:".sideTitle",
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:300
+        });
+
+         anime({
+            targets:".slideInfo h2",
+            translateY:[-50,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        anime({
+            targets:".slideInfo h1",
+            scale:[1.2,1],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        anime({
+            targets:".slideInfo p",
+            translateX:[100,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        anime({
+            targets:".slideInfo .btn",
+            translateY:[60,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        anime({
+            targets:".imgContent",
+            translateY:[100,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:800
+        });
+
+        anime({
+            targets:".imgContent img",
+            translateY:[100,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:1000
+        });
+
+        swiper.on('slideChangeTransitionStart',function(){
+            anime({
+            targets:".imgContent",
+            translateY:[180,0],
+            opacity:[0,1],
+            duration:500,
+            easing:'easeInOutSine',
+            delay:300
+        });
+
+        anime({
+            targets:".slideInfo",
+            translateX:[80,0],
+            opacity:[0,1],
+            duration:500,
+            easing:'easeInOutSine',
+            delay:500
+        });
+     
+      });
+
+    </script>
+</body>
+</html>
